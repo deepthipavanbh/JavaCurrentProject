@@ -1,0 +1,47 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: qa
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      url: jdbc:mysql://localhost:3306/springbootdbqa
+      password: Deepthi123$
+  jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: 'true'
+
+
+---
+spring:
+  profiles : prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/springbootdbprod
+    password: Deepthi123$
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+
+---
+spring:
+  profiles : dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/springbootdb
+    password: Deepthi123$
+  jpa:
+    hibernate:
+         ddl-auto: update
+    show-sql: 'true'
