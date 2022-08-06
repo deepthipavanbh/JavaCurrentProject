@@ -14,7 +14,7 @@ import java.util.List;
 public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
-
+// git test commit
        @PostMapping("/")
        public Department save(@RequestBody Department department){
              log.info("inside save method of DepartmentController");
